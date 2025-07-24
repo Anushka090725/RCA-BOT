@@ -1,7 +1,8 @@
+// Prometheus metrics 
 {
   "metric": "node_cpu_seconds_total",
   "values": [
-    {"timestamp": "2025-07-16T06:30:00Z", "value": 0.1},
-    {"timestamp": "2025-07-16T06:35:00Z", "value": 0.95}
+    {"timestamp": "2025-07-24T06:30:00Z", "value": 0.1},
+    {"timestamp": "2025-07-24T06:35:00Z", "value": 0.95}
   ]
 }

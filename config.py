@@ -10,17 +10,16 @@ HARDCODED_ALERT= [
   {
     "status": "firing",
     "labels": {
-      "alertname": "HighCPUUsage",
+      "alertname": "KubeletHighCPUUsage",
       "severity": "critical",
-      "instance": "10.0.1.24:9100",
-      "job": "node_exporter",
-      "application": "orders-service"
+      "instance": "192.168.49.2:10250",
+      "service": "prometheus-kube-prometheus-kubelet"
     },
     "annotations": {
       "summary": "Instance 10.0.1.24 CPU usage is above 90%",
       "description": "CPU usage is over 90% for the last 5 minutes."
     },
-    "startsAt": "2025-07-16T06:35:14.144Z",
+    "startsAt": "2025-07-24T09:37:14.144Z",
     "endsAt": "0001-01-01T00:00:00Z"
     # "generatorURL": "http://prometheus:9090/graph?g0.expr=100+-+avg+by(instance)(irate(node_cpu_seconds_total%7Bmode%3D%22idle%22%7D%5B5m%5D))+*+100&g0.tab=1"
   }

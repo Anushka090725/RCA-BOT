@@ -13,9 +13,6 @@ You are an SRE assistant.
 Here is the alert:
 {alert}
 
-Here are the Prometheus metrics in JSON:
-{metrics_json}
-
 Here are the logs from EFK in JSON:
 {logs_json}
 

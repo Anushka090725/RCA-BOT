@@ -1,6 +1,6 @@
 {
   "logs": [
-    {"timestamp": "2025-07-16T06:34:00Z", "message": "High CPU usage detected"},
-    {"timestamp": "2025-07-16T06:35:00Z", "message": "Application restarted due to threshold breach"}
+    {"timestamp": "2025-07-24T010:20:00Z", "message": "High CPU usage detected"},
+    {"timestamp": "2025-07-24T10:35:00Z", "message": "Application restarted due to threshold breach"}
   ]
 }

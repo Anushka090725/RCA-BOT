@@ -38,9 +38,10 @@
 
 from config import HARDCODED_ALERT
 from jsonToPromql import get_solution_from_alert  # this is your Gemini file
+from pprint import pprint
 
 print("hi in the hardcoded file")
-
+keywords = {}
 def extract_keywords(alert):
     labels = alert.get("labels", {})
     annotations = alert.get("annotations", {})
@@ -55,21 +56,17 @@ def extract_keywords(alert):
         "start_time": alert.get("startsAt"),
         "end_time": alert.get("endsAt")
     }
-    print("in the extract_keywords")
-    print(keywords)
+    # print(keywords)
     return keywords
 
 def test_alert_parsing_and_send_to_gemini():
     for alert in HARDCODED_ALERT:
-        print("test_alert_parsing_and_sned_to_gemini")
-        print(alert)
-        extracted = extract_keywords(alert)
-        
+        extracted = extract_keywords(alert)        
         # You can pass either full extracted dict or convert to JSON string
         gemini_response = get_solution_from_alert(extracted)
-        
-        print("\n📡 Gemini Suggested PromQL Query:")
-        print(gemini_response)
+    print(gemini_response)
+    return gemini_response 
 
 if __name__ == "__main__":
     test_alert_parsing_and_send_to_gemini()
+    
